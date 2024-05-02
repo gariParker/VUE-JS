@@ -1,0 +1,112 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+body{
+  background-color: rgb(23, 5, 93);
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+table{
+  color: #fff;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+#searchInput {
+  width: 591px; /* Largeur souhaitée */
+  padding: 10px; /* Espacement intérieur */
+  border-radius: 10px; /* Rayon de bordure */
+  border: 1px solid #ccc; /* Bordure */
+  font-size: 16px; /* Taille de police */
+  outline: none; /* Supprimer la bordure bleue lorsqu'il est sélectionné */
+}
+
+/* Style lorsque l'input est en focus */
+#searchInput:focus {
+  border-color: #007bff; /* Couleur de bordure lorsqu'il est en focus */
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajouter un fond semi-transparent */
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  height: 207px;
+}
+
+.edit-modal-content {
+  width: 400px; /* Largeur du modal de modification */
+}
+
+.edit-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirm-btn,
+.cancel-btn {
+  padding: 10px 20px; /* Agrandir les boutons */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.confirm-btn {
+  background-color: blue; /* Couleur bleue pour le bouton Confirmer */
+  color: #fff;
+}
+
+.cancel-btn {
+  background-color: red; /* Couleur rouge pour le bouton Annuler */
+  color: #fff;
+}
+
